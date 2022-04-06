@@ -19,7 +19,7 @@ public class Mesa {
     public Mesa() {
         this.mesa = new LinkedList[MAX_FILAS];
         for (int i = 0; i < mesa.length; i++) {
-            mesa[i] = new LinkedList();
+            mesa[i] = new LinkedList<>();
         }
     }
 
@@ -53,7 +53,7 @@ public class Mesa {
     }
 
     public List<Carta> cartasRodeadas(Carta carta, int fila, boolean extremo) {
-        List<Carta> toRet = new LinkedList();
+        List<Carta> toRet = new LinkedList<>();
         if (contieneCarta(carta, mesa[fila])) {
             if (extremo) {
                 for (int i = mesa[fila].size() - 1; i >= 0 && !mesa[fila].get(i).sonIguales(carta); i--) {

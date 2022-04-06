@@ -1,4 +1,3 @@
-
 /*
  * Esta clase representa la baraja de juego, necesitará implementar las siguientes funcionalidades
  *  - Un constructor con las cartas de la baraja

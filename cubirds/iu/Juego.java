@@ -19,7 +19,7 @@ public class Juego {
         // Mesa mesa = new Mesa();
         // mesa.colocarMesaInicial(baraja);
         // System.out.println(mesa);
-        // mesa.insertar(new Carta("Curruca de caña",6, ), 3, false, 1, baraja);
+        // mesa.insertar(new Carta("Curruca de caña",6, 9), 3, false, 1, baraja);
         // System.out.println(mesa);
 
 
