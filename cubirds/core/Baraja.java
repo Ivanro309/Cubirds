@@ -50,7 +50,6 @@ public class Baraja {
     }
     /**
      * Mezcla la baraja
-     * @param numCartas Numero de cartas que tiene la baraja.
      */
     public void barajar(){
         int numCartas = baraja.size();
