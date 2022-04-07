@@ -10,6 +10,8 @@ package es.uvigo.esei.cubirds.core;
 
 import java.util.Queue;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Baraja {
     private Queue<Carta> baraja;
@@ -44,25 +46,23 @@ public class Baraja {
         for (int i = 0; i < 13; i++) {
             baraja.add(new Carta("Guacamayo", 4, 6));
         }
-        barajar(110);
+        barajar();
     }
     /**
      * Mezcla la baraja
      * @param numCartas Numero de cartas que tiene la baraja.
      */
-    public void barajar(int numCartas){
-        Carta[] cartas = new Carta[numCartas];
+    public void barajar(){
+        int numCartas = baraja.size();
+        List<Carta> carta = new ArrayList<>();
+        int pos;
         for (int i = 0; i < numCartas; i++) {
-            cartas[i] = this.sacarCarta();
+            carta.add(baraja.remove());
         }
-        for (int i = 0; i < numCartas; i++) {
-            int random = (int)(Math.random()*numCartas);
-            Carta aux = cartas[i];
-            cartas[i] = cartas[random];
-            cartas[random] = aux;
-        }
-        for (int i = 0; i < numCartas; i++) {
-            baraja.add(cartas[i]);
+        while(!carta.isEmpty()) {
+            pos = (int) (Math.random() * numCartas);
+            baraja.add(carta.remove(pos));
+            numCartas--;
         }
     }
     /**
@@ -82,12 +82,9 @@ public class Baraja {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        int cont = 0;
         while(!baraja.isEmpty()){
             sb.append(baraja.remove().toString()).append("\n");
-            cont ++;
         }
-        sb.append(cont);
         return sb.toString();
     }
 }

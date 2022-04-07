@@ -7,7 +7,6 @@ import es.uvigo.esei.cubirds.core.*;
 
 public class Juego {
 
-
     public static void inicio() {
 
         // //Prueba de creación de baraja
@@ -22,27 +21,23 @@ public class Juego {
         // mesa.insertar(new Carta("Curruca de caña",6, 9), 3, false, 1, baraja);
         // System.out.println(mesa);
 
+        // Se crea la baraja
 
+        // Se crea el montón de descartes
 
-        //Se crea la baraja
+        // Se crea la mesa con las cartas iniciales
 
-        //Se crea el montón de descartes
-
-        //Se crea la mesa con las cartas iniciales
-        
-        //Se crean los jugadores    
+        // Se crean los jugadores
 
         // Se reparten las cartas
 
         // Empieza el juego
-                
-                //Jugador coloca en la mesa
-                //Se comprueba si el jugador se ha quedado sin cartas
-                //Se pregunta si quiere colocar cartas en la zona de juego
-                //Si el jugador no es ganador, se comprueba si se ha quedado sin cartas
-                //Se rellena la mesa
 
+        // Jugador coloca en la mesa
+        // Se comprueba si el jugador se ha quedado sin cartas
+        // Se pregunta si quiere colocar cartas en la zona de juego
+        // Si el jugador no es ganador, se comprueba si se ha quedado sin cartas
+        // Se rellena la mesa
     }
-
 
 }
