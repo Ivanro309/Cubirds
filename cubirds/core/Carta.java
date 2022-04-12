@@ -4,6 +4,7 @@
 
 package es.uvigo.esei.cubirds.core;
 
+import java.util.List;
 
 public class Carta {
     private String especie;
@@ -37,6 +38,16 @@ public class Carta {
         StringBuilder sb = new StringBuilder();
         sb.append(this.especie).append(" ").append(this.bandadaP).append("/").append(bandadaG);
         return sb.toString();
+    }
+
+    public static boolean contieneCarta(Carta carta, List<Carta> lista) {
+        boolean toRet = false;
+        for (Carta c : lista) {
+            if (c.sonIguales(carta)) {
+                toRet = true;
+            }
+        }
+        return toRet;
     }
     
 }

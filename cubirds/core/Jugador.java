@@ -38,7 +38,6 @@ public class Jugador {
     */
     
     private class Mano {
-
-    
+        
     }
 }

@@ -27,7 +27,7 @@ public class Mesa {
         for (int i = 0; i < MAX_FILAS; i++) {
             while (mesa[i].size() < 3) {
                 Carta cartaIntroducir = baraja.sacarCarta();
-                if (contieneCarta(cartaIntroducir, mesa[i])) {
+                if (Carta.contieneCarta(cartaIntroducir, mesa[i])) {
                     baraja.insertarCarta(cartaIntroducir);
                 } else {
                     mesa[i].add(cartaIntroducir);
@@ -54,7 +54,7 @@ public class Mesa {
 
     public List<Carta> cartasRodeadas(Carta carta, int fila, boolean extremo) {
         List<Carta> toRet = new LinkedList<>();
-        if (contieneCarta(carta, mesa[fila])) {
+        if (Carta.contieneCarta(carta, mesa[fila])) {
             if (extremo) {
                 for (int i = mesa[fila].size() - 1; i >= 0 && !mesa[fila].get(i).sonIguales(carta); i--) {
                     toRet.add(mesa[fila].get(i));
@@ -102,16 +102,4 @@ public class Mesa {
         }
         return sb.toString();
     }
-
-    private boolean contieneCarta(Carta carta, List<Carta> fila) {
-        boolean toRet = false;
-        for (Carta c : fila) {
-            if (c.sonIguales(carta)) {
-                toRet = true;
-            }
-        }
-        return toRet;
-    }
-
-    
 }
