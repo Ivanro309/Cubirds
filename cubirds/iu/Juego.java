@@ -3,6 +3,9 @@
  */
 package es.uvigo.esei.cubirds.iu;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import es.uvigo.esei.cubirds.core.*;
 
 public class Juego {
@@ -18,7 +21,11 @@ public class Juego {
         // Mesa mesa = new Mesa();
         // mesa.colocarMesaInicial(baraja);
         // System.out.println(mesa);
-        // mesa.insertar(new Carta("Curruca de caña",6, 9), 3, false, 1, baraja);
+        // List<Carta> cartas = new LinkedList<>();
+        // cartas.add(new Carta("Curruca de caña",6, 9));
+        // cartas.add(new Carta("Curruca de caña",6, 9));
+        // cartas.add(new Carta("Curruca de caña",6, 9));
+        // mesa.insertar(cartas, 3, false,baraja);
         // System.out.println(mesa);
 
         // Se crea la baraja
@@ -38,13 +45,6 @@ public class Juego {
         // Se pregunta si quiere colocar cartas en la zona de juego
         // Si el jugador no es ganador, se comprueba si se ha quedado sin cartas
         // Se rellena la mesa
-
-        Carta  c = new Carta("Paco", 1, 2);
-        Carta  c1 = new Carta("Paco", 1, 2);
-        System.out.println(c.equals(c1));
-        System.out.println("Carta 1: " + c);
-        System.out.println("Carta 2: " + c1);
-
     }
 
 }

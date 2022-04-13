@@ -36,20 +36,14 @@ public class Mesa {
         }
     }
 
-    public void insertar(Carta carta, int fila, boolean extremo, int numCartas, Baraja baraja) {
-        cartasRodeadas(carta, fila, extremo);
-        for (int i = 0; i < numCartas; i++) {
-            insertar(carta, fila, extremo);
+    public void insertar(List<Carta> carta, int fila, boolean extremo, Baraja baraja) {
+        cartasRodeadas(carta.get(0), fila, extremo);
+        if (extremo) {
+            mesa[fila].addAll(carta);
+        } else {
+            mesa[fila].addAll(0, carta);
         }
         rellenar(baraja, fila);
-    }
-
-    public void insertar(Carta carta, int fila, boolean extremo) {
-        if (extremo) {
-            mesa[fila].add(carta);
-        } else {
-            mesa[fila].add(0, carta);
-        }
     }
 
     public List<Carta> cartasRodeadas(Carta carta, int fila, boolean extremo) {
